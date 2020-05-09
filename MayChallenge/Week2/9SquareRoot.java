@@ -22,8 +22,13 @@
 
         int r = num;
         int i = 0;
+        /*
+            Since int will only hold 2 ^ 31. The test case with max number 2147483647 failed
+            Because 2147483647 * 2147483647 = 4 if midSqr is int. Hence we need to use long.
+        */
         long mid = 0;
         long midSqr = 0;
+        // using binary search
         while (i <= num) {
             mid = (i + num) / 2;
             midSqr = mid * mid;
