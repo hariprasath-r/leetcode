@@ -1,4 +1,5 @@
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class SingleNumber {
     public static void main(String[] args) {
@@ -9,8 +10,8 @@ public class SingleNumber {
         Map<Integer, Integer> count = new HashMap<>();
         int result = 0;
 
-        for (int i = 0; i < nums.length; i++) {
-            result = nums[i];
+        for (int num : nums) {
+            result = num;
             if (count.containsKey(result))
                 count.replace(result, count.get(result) + 1);
             else
@@ -19,13 +20,13 @@ public class SingleNumber {
 
         return count.entrySet().stream().parallel()
                 .filter(e -> e.getValue() == 1)
-                .map(e -> e.getKey()).findAny().get();
+                .map(Map.Entry::getKey).findAny().get();
     }
 
     public static int singleNumberBest(int[] nums) {
         int ans = 0;
-        for (int i = 0; i < nums.length; i++) {
-            ans = ans^nums[i];
+        for (int num : nums) {
+            ans = ans ^ num;
         }
         return ans;
     }
