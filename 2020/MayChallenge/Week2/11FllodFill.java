@@ -28,7 +28,7 @@
         The value of each color in image[i][j] and newColor will be an integer in [0, 65535].
  */
 
-class Solution {
+class FloodFillSolution {
     int[][] image;
     int[][] imageTrace;
     public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {

@@ -20,7 +20,7 @@
 
         Then 4 is the first bad version. 
  */
-class FirstBadVersion extends VersionControl {
+class FirstBadVersion /*extends VersionControl*/ {
     // my solution
     public int firstBadVersion(int n) {
         int left = 1;
@@ -34,5 +34,13 @@ class FirstBadVersion extends VersionControl {
             }
         }
         return left;
+    }
+
+    /**
+     * Temp method to resolve IDE error.
+     * The method is present in LeetCode by default for the problem
+     */
+    private boolean isBadVersion(int x) {
+        return false;
     }
 }

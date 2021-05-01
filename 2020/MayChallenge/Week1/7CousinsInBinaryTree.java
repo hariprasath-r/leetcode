@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 /**
     Cousins in Binary Tree
     ----------------------
@@ -36,7 +38,7 @@ class TreeNode {
     }
 }
 
-class Solution {
+class TreeNodeSolution {
     class NewNode {
         int depth;
         int parent;

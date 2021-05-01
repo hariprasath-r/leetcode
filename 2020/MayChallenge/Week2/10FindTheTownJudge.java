@@ -39,7 +39,7 @@
         trust[i][0] != trust[i][1]
         1 <= trust[i][0], trust[i][1] <= N
  */
- class Solution {
+ class FindTheTownJudgeSolution {
     public int findJudge(int N, int[][] trust) {
         if (N < 1 || N > 1000)
             return -1;

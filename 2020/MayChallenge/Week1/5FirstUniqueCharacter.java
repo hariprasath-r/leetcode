@@ -1,3 +1,6 @@
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 /**
     First Unique Character in a String
     ----------------------------------
